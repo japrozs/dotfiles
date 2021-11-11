@@ -15,6 +15,9 @@ set -g git $HOME/code/github
 # !! Contents within this block are managed by 'conda init' !!
 eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
+
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc"
+alias netinfo="node -e  'console.table('(curl ipinfo.io | tr '\n' ' ' )')'"
+
 set -g PATH /usr/local/opt/binutils/bin $PATH
 export NVM_DIR="$HOME/.nvm"
