@@ -3,8 +3,8 @@
 {
     "workbench.startupEditor": "newUntitledFile",
     "editor.formatOnSave": true,
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "editor.fontSize": 19,
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "editor.fontSize": 17,
     "explorer.confirmDelete": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -14,10 +14,7 @@
     "java.semanticHighlighting.enabled": true,
     "java.configuration.checkProjectSettingsExclusions": false,
     "prettier.tabWidth": 4,
-    "C_Cpp.updateChannel": "Insiders",
-    "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
+    "color-highlight.languages": ["*", "!c", "!cpp", "!h"],
     "editor.minimap.enabled": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook",
@@ -32,57 +29,6 @@
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
     "security.workspace.trust.untrustedFiles": "open",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
-    "better-comments.tags": [
-        {
-            "tag": "!",
-            "color": "#FF2D00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": ":",
-            "color": "#3498DB",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "//",
-            "color": "#474747",
-            "strikethrough": true,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "todo",
-            "color": "#FF8C00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "*",
-            "color": "#98C379",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        }
-    ],
-    "redhat.telemetry.enabled": false,
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
@@ -92,10 +38,7 @@
         {
             "name": "vscode-expo-manifest",
             "url": "file:///Users/pritpalsinghsaini/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json",
-            "fileMatch": [
-                "app.json",
-                "app.config.json"
-            ]
+            "fileMatch": ["app.json", "app.config.json"]
         }
     ],
     "editor.accessibilitySupport": "off",
@@ -109,11 +52,21 @@
             "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
         }
     ],
+    "C_Cpp.default.includePath": ["${default}", "$[workspaceFolder}/include"],
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "k"],
             "after": ["<esc>"]
         }
     ],
-    "workbench.colorTheme": "One Dark Pro Monokai Darker"
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": ["comment.line.double-slash.cpp"],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    }
 }
