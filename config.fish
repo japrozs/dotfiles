@@ -2,10 +2,34 @@ fortune | cowsay -f tux
 set fish_color_command brwhite --bold
 set fish_color_host yellow
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
-set -gx CLOUDINARY_URL 'cloudinary://<INSERT_KEY_HERE>'
+set -gx CLOUDINARY_URL 'cloudinary://315868988132497:uuY-fcLEdUz2OZv6ePGa45qeYJo@dl4o8eaha'
+
+#  wechall tokens
+set -gx WECHALLUSER "japrozs"
+set -gx WECHALLTOKEN "77B03-7C855-137B2-8CE26-179B1-69C92"
 
 function tree
 	find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+end
+
+function ask -d 'ask bratgpt something'
+	curl 'https://bratgpt.vercel.app/api/generate' \                                   17:56:44
+         -H 'authority: bratgpt.vercel.app' \
+         -H 'accept: */*' \
+         -H 'accept-language: en-US,en;q=0.9,hi;q=0.8' \
+         -H 'content-type: application/json' \
+         -H 'dnt: 1' \
+         -H 'origin: https://bratgpt.com' \
+         -H 'referer: https://bratgpt.com/' \
+         -H 'sec-ch-ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"' \
+         -H 'sec-ch-ua-mobile: ?0' \
+         -H 'sec-ch-ua-platform: "macOS"' \
+         -H 'sec-fetch-dest: empty' \
+         -H 'sec-fetch-mode: cors' \
+         -H 'sec-fetch-site: cross-site' \
+         -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36' \
+         --data-raw "{\"prompt\":[{\"role\":\"user\",\"content\":\"$var\"}]}" \
+         --compressed
 end
 
 function rnd-hash -d 'generate a random 32bit md5sum hash'
