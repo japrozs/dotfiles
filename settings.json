@@ -9,7 +9,7 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "explorer.confirmDragAndDrop": false,
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, Menlo",
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, Menlo, Segoe UI Emoji",
     "liveServer.settings.donotVerifyTags": true,
     "java.semanticHighlighting.enabled": true,
     "java.configuration.checkProjectSettingsExclusions": false,
@@ -23,6 +23,10 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "terminal.integrated.fontSize": 16,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "clang-format.executable": "/usr/local/opt/llvm/bin/clang-format",
     "editor.cursorStyle": "line",
     "editor.insertSpaces": false,
     "editor.lineNumbers": "on",
@@ -52,13 +56,24 @@
             "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
         }
     ],
-    "C_Cpp.default.includePath": ["${default}", "$[workspaceFolder}/include"],
+    "C_Cpp.default.includePath": [
+        "${default}",
+        "$[workspaceFolder}/include",
+        "/opt/local/include",
+        "/usr/local/opt/freetype/include/freetype2",
+        "/usr/local/include/",
+        "${workspaceFolder}",
+        "/usr/local/include/SDL2",
+        "/usr/local/Cellar/glew/2.2.0_1/include",
+        "/usr/local/Cellar/glfw/3.3.6/include"
+    ],
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "k"],
             "after": ["<esc>"]
         }
     ],
+    "editor.rulers": [80],
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -68,5 +83,42 @@
                 }
             }
         ]
-    }
+    },
+    "cmake.configureOnOpen": false,
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "editor.renderWhitespace": "none",
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "cpp": false,
+        "python": false,
+        "makefile": false,
+        "cmake": false,
+        "typescriptreact": false,
+        "c": false,
+        "css": false,
+        "jsonc": false,
+        "rust": false,
+        "typescript": false,
+        "json": false,
+        "nearley": false,
+        "javascript": false,
+        "shellscript": false,
+        "html": false
+    },
+    "editor.inlineSuggest.enabled": true,
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "npm.exclude": ["**/xpacks/**"],
+    "haskell.manageHLS": "GHCup",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "window.commandCenter": true
 }
