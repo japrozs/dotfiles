@@ -1,5 +1,3 @@
-// Theme color Classes can be found here!!!
-//https://code.visualstudio.com/api/references/theme-color
 {
     "workbench.startupEditor": "newUntitledFile",
     "editor.formatOnSave": true,
@@ -9,12 +7,13 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "explorer.confirmDragAndDrop": false,
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, Menlo, Segoe UI Emoji",
+    "editor.fontFamily": "'DejaVu Sans Mono', Menlo, Monaco, 'Courier New', monospace, Menlo, Segoe UI Emoji",
     "liveServer.settings.donotVerifyTags": true,
     "java.semanticHighlighting.enabled": true,
     "java.configuration.checkProjectSettingsExclusions": false,
     "prettier.tabWidth": 4,
     "color-highlight.languages": ["*", "!c", "!cpp", "!h"],
+    "color-highlight.markerType": "dot-before",
     "editor.minimap.enabled": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook",
@@ -38,13 +37,6 @@
         "jupyter-notebook": "left"
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "json.schemas": [
-        {
-            "name": "vscode-expo-manifest",
-            "url": "file:///Users/pritpalsinghsaini/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json",
-            "fileMatch": ["app.json", "app.config.json"]
-        }
-    ],
     "editor.accessibilitySupport": "off",
     "githubIssues.queries": [
         {
@@ -55,6 +47,18 @@
             "label": "Created Issues",
             "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
         }
+    ],
+    "C_Cpp.default.browse.path": [
+        "${default}",
+        "$[workspaceFolder}/include",
+        "/opt/local/include",
+        "/usr/local/opt/freetype/include/freetype2",
+        "/usr/local/include/",
+        "${workspaceFolder}",
+        "/usr/local/include/SDL2",
+        "/opt/homebrew/Cellar/glfw/3.3.9/include",
+        "/opt/homebrew/Cellar/glm/0.9.9.8/include/",
+        "/Users/japroz/VulkanSDK/1.3.268.1/macOS/include"
     ],
     "C_Cpp.default.includePath": [
         "${default}",
@@ -89,27 +93,6 @@
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "editor.renderWhitespace": "none",
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false,
-        "cpp": false,
-        "python": false,
-        "makefile": false,
-        "cmake": false,
-        "typescriptreact": false,
-        "c": false,
-        "css": false,
-        "jsonc": false,
-        "rust": false,
-        "typescript": false,
-        "json": false,
-        "nearley": false,
-        "javascript": false,
-        "shellscript": false,
-        "html": false
-    },
     "editor.inlineSuggest.enabled": true,
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.cStandard": "c17",
@@ -119,6 +102,10 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "window.commandCenter": true
+    "window.commandCenter": true,
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typst-lsp.exportPdf": "never",
+    "arduino.useArduinoCli": true,
+    "workbench.colorTheme": "One Dark Pro Monokai Darker"
 }
