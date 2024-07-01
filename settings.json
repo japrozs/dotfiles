@@ -85,6 +85,12 @@
                 "settings": {
                     "fontStyle": ""
                 }
+            },
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": ""
+                }
             }
         ]
     },
