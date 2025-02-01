@@ -1,7 +1,17 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
 {
+	"font_size" : 16,
+	"rulers" : [80],
+	"font_face" : "DejaVu Sans Mono",
 	"theme": "Default Dark.sublime-theme",
 	"color_scheme": "Monokai.sublime-color-scheme",
-	"font_size" : 18,
+	"ignored_packages":
+	[
+		"Rust",
+		"Vintage",
+	],
+	"index_files": true,
 	"font_options":
 	[
 	    "no_round",
@@ -9,10 +19,6 @@
 	    "gray_antialias",
 	    "subpixel_antialias"
 	],
-	"ignored_packages":
-	[
-		"Vintage",
-	],
-	"index_files": true,
-	"hot_exit" : false
+	"hot_exit" : false,
+	"update_check" : false
 }
